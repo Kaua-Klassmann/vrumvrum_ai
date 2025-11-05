@@ -1,0 +1,8 @@
+[package]
+name = "vrumvrum_ai"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+image = { version = "0.25.8", default-features = false, features = ["jpeg"] }
+tch = "0.22.0"
