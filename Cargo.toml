@@ -4,5 +4,5 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
-image = { version = "0.25.8", default-features = false, features = ["jpeg"] }
+image = { version = "0.25.9", features = ["jpeg"], default-features = false }
 tch = "0.22.0"

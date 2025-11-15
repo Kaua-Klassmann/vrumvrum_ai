@@ -126,10 +126,9 @@ fn main() {
         if epoch % 1 == 0 {
             let y_pred = x_test.apply_t(&model, false).argmax(1, false);
 
-            let acc = y_pred.eq_tensor(&y_test).sum(Kind::Int64).double_value(&[])
-                / y_test.size()[0] as f64;
+            let acc = y_pred.accuracy_for_logits(&y_test);
 
-            println!("Epoch {} - Acurácia {}", epoch, acc);
+            println!("Epoch {} - Acurácia {:?}", epoch, acc);
         }
     }
 
